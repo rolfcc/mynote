@@ -189,20 +189,9 @@ int main() {
 ```
 ````
 
-标记语言的：
+五颜六色，跟在自己的编辑器上似的：
 
 ```C
-#include <stdio.h>
-
-int main() {
-    printf("hello, world");
-    return 0;
-}
-```
-
-未标记语言的：
-
-```
 #include <stdio.h>
 
 int main() {
@@ -257,9 +246,9 @@ Header1 | Header2
 1 | 000000000000002
 00003 | 4
 
+### 14. 本仓库内的任意链接
 
-
-
+#1
 
 
 
