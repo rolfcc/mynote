@@ -1,10 +1,12 @@
 # git的简单使用
 
-<a href="https://git-scm.com/doc" target="_blank">官方文档</a>
+<a href="https://git-scm.com/doc" target="_blank">git 官方文档</a>
+<br />
+<a href="https://git-scm.com/downloads" target="_blank">git 官方下载</a>
 
-## git的安装
+## 设置 git
 
-## 设置
+安装好 git 后的第一件事：
 
 ```bash
 git config --global user.email "you@example.com"
@@ -18,49 +20,53 @@ git config --global credential.helper store
 ## 配置一个新项目
 
 官方会给一大堆命令，照着做就行  
-比如新建一个项目 example  
-会给出如下指令:  
-
-> echo "# example" >> README.md  
-> git init  
-> git add README.md  
-> git commit -m "first commit"  
-> git remote add origin https://github.com/rolfcc/example.git  
-> git push -u origin master  
-
-当然，首先要移动到项目的文件夹下。。。  
+比如新建一个项目 example 后会给出如下指令  
+在项目目录下依次运行即可
 
 ```bash
 echo "# example" >> README.md
-# 当前目录下生成一个名为 README.md 的文件
-# 文件第一行是引号内容
+git init
+git add README.md
+git commit -m "first commit"
+git remote add origin https://github.com/rolfcc/ample.git
+git push -u origin master
+```
+
+各命令的意义  
+
+```bash
+echo "# example" >> README.md
+# 当前目录下生成一个名为 README.md 的文件，并写入字符串
 git init
 # 初始化本地仓库
 git add README.md
 # 把刚才的 README.md 提交到暂存区，以便等下提交
 git commit -m "first commit"
-# 把暂存区内容提交到本地版本库
+# 把暂存区内容提交到本地版本库并添加本次提交的描述
 git remote add origin https://github.com/rolfcc/example.git
-# remote 就是服务器上的仓库
-# 这是添加一个远程仓库路径
+# 添加一个名为 origin 的远程仓库
 git push -u origin master
-# 将本地 master 分支推送至 origin 主机，并指定 origin 主机为默认主机
+# 将本地 master 分支推送至 origin 主机，并指定 origin 主机为默认主机，以后可不带参数，直接提交
 ```
 
-## 更新常用命令
+## 常用命令
+
+暂存区操作
 
 ```bash
 git add .
 # 提交所有新文件和已修改文件，不包括已删除文件
 git add -u
-# update 不包括新文件，但包括已删除文件
+# 不包括新文件，但包括已删除文件
 git add -A
-# 相当于 --all
+# 全部提交
 git add <文件名>
 # 添加一个文件
 git rm <文件名>
 # 删除，很好理解
 ```
+
+本地仓库操作
 
 ```bash
 git commit -m "随便写点啥"
@@ -70,6 +76,8 @@ git commit
 git commit -a
 # 提交所有跟踪文件的修改与删除，没有新文件
 ```
+
+远程仓库操作
 
 ```bash
 git push <主机名> <分支名>
