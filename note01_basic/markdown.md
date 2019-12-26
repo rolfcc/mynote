@@ -1,5 +1,7 @@
 # 如何写 .md 文件
 
+[top]: haha
+
 <a href="https://git-scm.com/doc" target="_blank">markdown 官方基本教程</a><br />
 <a href="https://guides.github.com/features/mastering-markdown/#GitHub-flavored-markdown" target="_blank">GitHub 的 markdown 教程</a>包括GFM<br />
 <a href="https://help.github.com/cn/github/writing-on-github" target="_blank">在 GitHub 上编写</a>
@@ -246,15 +248,39 @@ Header1 | Header2
 1 | 000000000000002
 00003 | 4
 
-### 14. 本仓库内的任意链接
+### 14. @用户
 
-TMD 没看懂。。。
+等我有对象以后可以试试
 
-#1  
-mynote#1  
-rolfcc/mynote#1  
+### 15. 自动为网址添加链接
 
+所以 `<URL>` 这条语法是没有必要的
 
+### 16. 删除线
+
+```markdown
+~~数据删除~~
+```
+
+## 注释
+
+使用
+
+```markdown
+[^_^]:
+    看不到我，看不到我，看不到我
+[>_<]:
+    看不到我，看不到我，看不到我
+```
+
+[^_^]:
+    看不到我，看不到我，看不到我
+[>_<]:
+    看不到我，看不到我，看不到我
+    
+可注释本行和下一行，重要的是方括号和冒号，括号内些什么无所谓的
+
+[top](#top)
 
 
 
@@ -328,20 +354,3 @@ rolfcc/mynote#1
 
 ***
 
-## 注释
-
-不知道哪个鬼才找到这种注释方法。。。
-
-```
-[^_^]:
-    看不到我，看不到我，看不到我
-[>_<]:
-    看不到我，看不到我，看不到我
-```
-
-[^_^]:
-    看不到我，看不到我，看不到我
-[>_<]:
-    看不到我，看不到我，看不到我
-    
-可注释本行和下一行，重要的是方括号和冒号，括号内些什么无所谓的
