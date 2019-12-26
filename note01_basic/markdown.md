@@ -1,9 +1,33 @@
 # 如何写 .md 文件
 
-[top]: haha
+- [如何写 .md 文件](#%e5%a6%82%e4%bd%95%e5%86%99-md-%e6%96%87%e4%bb%b6)
+  - [参考网站](#%e5%8f%82%e8%80%83%e7%bd%91%e7%ab%99)
+  - [markdown 通用语法](#markdown-%e9%80%9a%e7%94%a8%e8%af%ad%e6%b3%95)
+    - [1. 标题](#1-%e6%a0%87%e9%a2%98)
+    - [2. 引用](#2-%e5%bc%95%e7%94%a8)
+    - [3. 列表](#3-%e5%88%97%e8%a1%a8)
+      - [无序列表](#%e6%97%a0%e5%ba%8f%e5%88%97%e8%a1%a8)
+      - [有序列表](#%e6%9c%89%e5%ba%8f%e5%88%97%e8%a1%a8)
+    - [4. 代码](#4-%e4%bb%a3%e7%a0%81)
+    - [5. 分割线](#5-%e5%88%86%e5%89%b2%e7%ba%bf)
+    - [6. 链接](#6-%e9%93%be%e6%8e%a5)
+    - [7. 强调](#7-%e5%bc%ba%e8%b0%83)
+    - [8. 图片](#8-%e5%9b%be%e7%89%87)
+    - [9. 转义字符](#9-%e8%bd%ac%e4%b9%89%e5%ad%97%e7%ac%a6)
+    - [10. 自动链接](#10-%e8%87%aa%e5%8a%a8%e9%93%be%e6%8e%a5)
+  - [GFM (GitHub Flavored Markdown)](#gfm-github-flavored-markdown)
+    - [11. 高亮语法](#11-%e9%ab%98%e4%ba%ae%e8%af%ad%e6%b3%95)
+    - [12. 任务表](#12-%e4%bb%bb%e5%8a%a1%e8%a1%a8)
+    - [13. 表格](#13-%e8%a1%a8%e6%a0%bc)
+    - [14. @用户](#14-%e7%94%a8%e6%88%b7)
+    - [15. 自动为网址添加链接](#15-%e8%87%aa%e5%8a%a8%e4%b8%ba%e7%bd%91%e5%9d%80%e6%b7%bb%e5%8a%a0%e9%93%be%e6%8e%a5)
+    - [16. 删除线](#16-%e5%88%a0%e9%99%a4%e7%ba%bf)
+  - [注释 &amp; 做锚](#%e6%b3%a8%e9%87%8a-amp-%e5%81%9a%e9%94%9a)
+
+## 参考网站
 
 <a href="https://git-scm.com/doc" target="_blank">markdown 官方基本教程</a><br />
-<a href="https://guides.github.com/features/mastering-markdown/#GitHub-flavored-markdown" target="_blank">GitHub 的 markdown 教程</a>包括GFM<br />
+<a href="https://guides.github.com/features/mastering-markdown/#GitHub-flavored-markdown" target="_blank">GitHub 的 markdown 教程（包括GFM）</a><br />
 <a href="https://help.github.com/cn/github/writing-on-github" target="_blank">在 GitHub 上编写</a>
 
 ## markdown 通用语法
@@ -279,3 +303,9 @@ Header1 | Header2
     看不到我，看不到我，看不到我
 [>_<]:
     看不到我，看不到我，看不到我
+
+其实使用 HTML 的注释才是标准做法，不过这样又不是不能用。
+
+```markdown
+<!-- 注释 -->
+```
