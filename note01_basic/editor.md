@@ -39,11 +39,10 @@ oO0IlT7L1|!！[]-——一~`'‘‘"“”,，.?？
   >    Fedora `sudo dnf install wqy-zenhei-fonts`  
   >    时间过久包名可能改变，善用包管理器的补全功能（输一部分包名，按两下 `Tab` 可获得可安装软件列表)
 
-- 等距更纱黑体
-  这次的新发现，英简繁日韩文都有，系统均可识别，尚未发现问题。  
+- 等距更纱黑体  
+  这次的新发现，英简繁日韩文都有，系统均可识别，尚未发现问题。
   [项目地址](https://github.com/be5invis/Sarasa-Gothic)  
-  Win10 可使用应用商店安装，搜索“更纱黑体”。  
-  其他系统请使用 npm 包管理器  
+  Win10 可使用应用商店安装，搜索“更纱黑体”。其他系统请使用 npm 包管理器  
 
 [返回](#文本编辑器的选择与使用)
 
@@ -164,3 +163,4 @@ Markdown All in One: Update Table of Contents
 |       `Ctrl+M`        |             数学公式              |
 |        `Alt+C`        | `- [ ] Uncheck` <-> `- [x] Check` |
 |     `Alt+Shift+F`     |            表格格式化             |
+|  `Ctrl+K` 然后按 `V`  |               预览                |
