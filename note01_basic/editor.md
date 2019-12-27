@@ -11,7 +11,10 @@
     - [辅助](#%e8%be%85%e5%8a%a9)
     - [Markdown 相关](#markdown-%e7%9b%b8%e5%85%b3)
   - [2. 设置](#2-%e8%ae%be%e7%bd%ae)
-  - [3. 使用](#3-%e4%bd%bf%e7%94%a8)
+  - [3. 常规使用](#3-%e5%b8%b8%e8%a7%84%e4%bd%bf%e7%94%a8)
+    - [多重选择](#%e5%a4%9a%e9%87%8d%e9%80%89%e6%8b%a9)
+  - [4. Markdown相关](#4-markdown%e7%9b%b8%e5%85%b3)
+    - [根据标题生成/更新目录](#%e6%a0%b9%e6%8d%ae%e6%a0%87%e9%a2%98%e7%94%9f%e6%88%90%e6%9b%b4%e6%96%b0%e7%9b%ae%e5%bd%95)
 
 ## 字体
 
@@ -25,7 +28,7 @@ oO0IlT7L1|!！[]-——一~`'‘‘"“”,，.?？
 
 字体要求，西文一倍宽度，中日韩文字符二倍宽度，方便列编辑。相似符号显示有辨识度，防止看错。
 
-* 文泉驿等宽正黑  
+- 文泉驿等宽正黑  
   很早就在用的字体，虽然不一定好看，但至少能用，多年下来已经习惯了。没有粗体，字重全靠渲染，可能出现字符显示不全的问题Windows 控制台和 Windows PowerShell 不认为这是等宽字体，无法使用。Ubuntu 终端似乎也不能使用，不知道为什么。  
   <a href="http://wenq.org/wqy2/index.cgi" target="_blank">官方网站</a>  
   <a href="http://wenq.org/wqy2/index.cgi?Download#ZenHei_Stable" target="_blank">字体下载</a>  
@@ -35,7 +38,7 @@ oO0IlT7L1|!！[]-——一~`'‘‘"“”,，.?？
   >    Fedora `sudo dnf install wqy-zenhei-fonts`  
   >    时间过久包名可能改变，善用包管理器的补全功能（输一部分包名，按两下 `Tab` 可获得可安装软件列表)
 
-* 等距更纱黑体
+- 等距更纱黑体
   这次的新发现，英简繁日韩文都有，系统均可识别，尚未发现问题。  
   [项目地址](https://github.com/be5invis/Sarasa-Gothic)  
   Win10 可使用应用商店安装，搜索“更纱黑体”。  
@@ -131,4 +134,21 @@ MD033 是禁用 HTML 代码
 
 [返回](#文本编辑器的选择与使用)
 
-### 3. 使用
+### 3. 常规使用
+
+#### 多重选择
+
+选择同样元素 `Ctrl+D` 选择上一个 `Ctrl+U`  
+块选择 `Alt+Shift` 或鼠标中键拖动
+连续选择 `Ctrl+Shift`
+
+### 4. Markdown相关
+
+#### 根据标题生成/更新目录
+
+```VS Code
+Markdown All in One: Create Table of Contents
+Markdown All in One: Update Table of Contents
+```
+
+不需要在目录中显示的标题，在行尾加上 `<!-- omit in toc -->`
