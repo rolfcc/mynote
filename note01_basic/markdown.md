@@ -33,7 +33,7 @@
 <a href="https://guides.github.com/features/mastering-markdown/#GitHub-flavored-markdown" target="_blank">GitHub 的 markdown 教程（包括GFM）</a><br />
 <a href="https://help.github.com/cn/github/writing-on-github" target="_blank">在 GitHub 上编写</a>
 
-[返回](#如何写-md-文件)
+[返回](#如何写-md-文件-)
 
 ## markdown 通用语法
 
