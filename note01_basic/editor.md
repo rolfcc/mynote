@@ -14,7 +14,8 @@
   - [3. 常规使用](#3-%e5%b8%b8%e8%a7%84%e4%bd%bf%e7%94%a8)
     - [多重选择](#%e5%a4%9a%e9%87%8d%e9%80%89%e6%8b%a9)
   - [4. Markdown相关](#4-markdown%e7%9b%b8%e5%85%b3)
-    - [根据标题生成/更新目录](#%e6%a0%b9%e6%8d%ae%e6%a0%87%e9%a2%98%e7%94%9f%e6%88%90%e6%9b%b4%e6%96%b0%e7%9b%ae%e5%bd%95)
+    - [Markdown All in One 根据标题生成/更新目录](#markdown-all-in-one-%e6%a0%b9%e6%8d%ae%e6%a0%87%e9%a2%98%e7%94%9f%e6%88%90%e6%9b%b4%e6%96%b0%e7%9b%ae%e5%bd%95)
+    - [Markdown All in One 快捷键](#markdown-all-in-one-%e5%bf%ab%e6%8d%b7%e9%94%ae)
 
 ## 字体
 
@@ -144,7 +145,7 @@ MD033 是禁用 HTML 代码
 
 ### 4. Markdown相关
 
-#### 根据标题生成/更新目录
+#### Markdown All in One 根据标题生成/更新目录
 
 ```VS Code
 Markdown All in One: Create Table of Contents
@@ -152,3 +153,14 @@ Markdown All in One: Update Table of Contents
 ```
 
 不需要在目录中显示的标题，在行尾加上 `<!-- omit in toc -->`
+
+#### Markdown All in One 快捷键
+
+|        快捷键         |               功能                |
+| :-------------------: | :-------------------------------: |
+|       `Ctrl+B`        |               加粗                |
+|       `Ctrl+I`        |               倾斜                |
+| `Ctrl+Shift`+`[`或`]` |             标题等级              |
+|       `Ctrl+M`        |             数学公式              |
+|        `Alt+C`        | `- [ ] Uncheck` <-> `- [x] Check` |
+|     `Alt+Shift+F`     |            表格格式化             |
