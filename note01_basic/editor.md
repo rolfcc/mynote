@@ -139,7 +139,8 @@ MD033 是禁用 HTML 代码
 
 #### 多重选择
 
-选择同样元素 `Ctrl+D` 选择上一个 `Ctrl+U`  
+选择同样元素 `Ctrl+D`  
+选择上一个 `Ctrl+U`  
 块选择 `Alt+Shift` 或鼠标中键拖动  
 连续选择 `Ctrl+Shift`  
 这个似乎和vim插件冲突。。。

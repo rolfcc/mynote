@@ -34,18 +34,8 @@
   - [4-3. `static` 关键字](#4-3-static-%e5%85%b3%e9%94%ae%e5%ad%97)
   - [4-4. 接口](#4-4-%e6%8e%a5%e5%8f%a3)
   - [4-5. 异常处理](#4-5-%e5%bc%82%e5%b8%b8%e5%a4%84%e7%90%86)
-- [5. Java的输入和输出类](#5-java%e7%9a%84%e8%be%93%e5%85%a5%e5%92%8c%e8%be%93%e5%87%ba%e7%b1%bb)
-- [6. 多线程机制](#6-%e5%a4%9a%e7%ba%bf%e7%a8%8b%e6%9c%ba%e5%88%b6)
-  - [6-1. 成员变量](#6-1-%e6%88%90%e5%91%98%e5%8f%98%e9%87%8f)
-  - [6-2. 构造函数](#6-2-%e6%9e%84%e9%80%a0%e5%87%bd%e6%95%b0)
-  - [6-3. 常用的方法](#6-3-%e5%b8%b8%e7%94%a8%e7%9a%84%e6%96%b9%e6%b3%95)
-  - [6-4. 多线程实现](#6-4-%e5%a4%9a%e7%ba%bf%e7%a8%8b%e5%ae%9e%e7%8e%b0)
-  - [6-5. 线程同步](#6-5-%e7%ba%bf%e7%a8%8b%e5%90%8c%e6%ad%a5)
-- [7. Java网络基础](#7-java%e7%bd%91%e7%bb%9c%e5%9f%ba%e7%a1%80)
-  - [7-1. URL类](#7-1-url%e7%b1%bb)
-  - [7-2. URLConnection类](#7-2-urlconnection%e7%b1%bb)
-  - [7-3. Socket类](#7-3-socket%e7%b1%bb)
-  - [7-4. ServerSocket类](#7-4-serversocket%e7%b1%bb)
+- [5. 常用功能](#5-%e5%b8%b8%e7%94%a8%e5%8a%9f%e8%83%bd)
+  - [键盘数据录入](#%e9%94%ae%e7%9b%98%e6%95%b0%e6%8d%ae%e5%bd%95%e5%85%a5)
 
 ## 1. Java基本语法
 
@@ -555,124 +545,16 @@ class 类名 {
 }
 ```
 
-## 5. Java的输入和输出类  
+## 5. 常用功能
 
-`java.io` 包括了所有输入、输出相关的类，此处仅介绍一部分，更多内容参考<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/io/package-summary.html" target="_blank">官方文档</a>。
+### 键盘数据录入
 
-- 面向字节的流类 InputStream/OutputStream  
-  对文件的字节流操作，与环境无关，是最常见的IO操作
-  - FileInputStream/FileOutputStream 文件读写
-  - [DataInputStream/DataOutputStream 数据流读写](./c09_javaio/DataIOStm.java)
-  - [BufferedInputStream/BufferedOutputStream 通过缓冲区读写](./c09_javaio/BufferedIOStm.java)
-- 面向字符型的流类 Reader/Writer  
-  应该是对文本文件的操作吧，毕竟是面向字符  
-  - [BufferedReader/BufferedWriter](./c09_javaio/BufferedRW.java)  
-    在面对字节操作时，生成的文件时二进制文件。但面对字符操作时，得到的时文本文件。
-  - PrintWriter  
-    包含 `print` 和 `println`  
-
-## 6. 多线程机制  
-
-Java通过 `Thread` 类支持多线程，通过 `import java.long.Thread` 导入。
-
-### 6-1. 成员变量
-
-规定优先级为1~10，通常为5。
-
-### 6-2. 构造函数
-
-`public Thread(ThreadGroup group, Runnable target, String name)`  
-`group` 配置一个属于group线程组的线程  
-`target` 调用可执行对象target中的run()方法  
-`name` 设置线程名字  
-三个参数可任意搭配，也可不填。
-
-### 6-3. 常用的方法  
-
-`public static int activeCount()` 返回线程群中线程数量  
-`public static native Thread currentThread()` 返回活动的线程  
-`public String getName()` 返回线程名称  
-`public int getPriority()` 返回优先级  
-`public void setPriotity()` 设置优先级  
-`public ThreadGroup getThreadGroup()` 返回当前线程所属线程群  
-`public void interrupt()`  中断当前线程  
-`public static Boolean interrupted()` 返回中断状态并清除中断状态  
-`public boolean isInterrupted()` 返回中断状态，但不改变  
-`public Boolean isAlive()` 返回当前线程存活情况  
-`public final boolean isDaemon()` 是否为守护线程  
-`public void setDaemon()` 设置为守护线程  
-`public void setName(String name)` 设置名字  
-`public void resume()` 恢复运行状态  
-`public void run()` 线程启动  
-`public void destroy()` 线程结束  
-`public static void sleep(long millis)` 线程睡眠  
-`public void start()` 线程运行  
-`public void stop()` 线程终止  
-`public void suspend()` 线程挂起  
-`public static void yield()` 退出线程执行，执行权交给其他线程  
-
-### 6-4. 多线程实现
-
-- 继承 Thread 类
-
-  ```java
-  class 类名 extend Thread {
-      // 构造函数调用父类
-      类名(String name) {
-          super(name);
-      }
-
-      public void run() {
-          // 子类中覆盖 run() 方法
-          // 线程执行内容
-      }
-
-  }
-  ```
-
-- 实现 Runnable 接口
-
-  ```java
-  class 类名 implements Runnable {
-      public void run() {
-          // 执行操作
-      }
-  }
-
-  // 调用（这个类只是线程任务记录的类，而非创建线程的类。
-  类名 r = new 类名();
-  Thread mthread = new Thread(r);
-  mthread.run();
-  ```
-
-### 6-5. 线程同步
-
-关键字 `synchronized` 修饰的方法同时只能被一个线程调用
-
-```java
-public synchronized void 类名() {}
-```
-
-## 7. Java网络基础
-
-网络相关的类在 `java.net` 下
-
-### 7-1. URL类
-
-- 常用构造函数  
-  `URL(String URL)` 建立一个URL类对象  
-  `URL(String protocol, String host, int port, String file)` 通过给定的参数(协议、主机名、端口号、文件名)创建URL  
-  `URL(URL context, String url)` 使用基地址和相对URL创建  
-- 常用方法
-
-### 7-2. URLConnection类
-
-URL类 `openConnection()` 方法返回一个URLConnection类  
-
-### 7-3. Socket类
-
-客户端
-
-### 7-4. ServerSocket类
-
-服务器端
+1. 所需的包  
+  `import java.util.Scanner;`
+2. 从屏幕输入  
+  `Scanner sc = new Scanner(System.in);`  
+3. 赋值给变量  
+  `int x = sc.nextInt();`  
+  `String str = sc.nextLine();`  
+4. 用完记得关掉  
+  `sc.close();`  
