@@ -509,7 +509,7 @@ abstract class 类名 {
 
 ### 4-5. 异常处理
 
-异常处理流程：
+异常处理流程（一个try可有多个catch）：
 
 ```java
 try {

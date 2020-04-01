@@ -426,6 +426,8 @@ Integer i8 = 127;
 2. SimpleDateFormat 类：子类  
    位置：`java.text.SimpleDateFormat`  
 
+他们的构造方法可以确定日期格式
+
 子类找不到方法去父类找。
 
 `String format(Date date)`将一个 Date 格式化为日期/时间字符串。  

@@ -32,6 +32,13 @@
   - [3-4. 静态导入](#3-4-%e9%9d%99%e6%80%81%e5%af%bc%e5%85%a5)
   - [3-5. 可变参数](#3-5-%e5%8f%af%e5%8f%98%e5%8f%82%e6%95%b0)
   - [3-6. 枚举](#3-6-%e6%9e%9a%e4%b8%be)
+- [4. Map 集合](#4-map-%e9%9b%86%e5%90%88)
+  - [4-1. Map](#4-1-map)
+  - [4-2. HashMap](#4-2-hashmap)
+  - [4-3. LinkedHashMap](#4-3-linkedhashmap)
+  - [4-4. TreeMap](#4-4-treemap)
+- [5. Collections](#5-collections)
+- [5. 总结](#5-%e6%80%bb%e7%bb%93)
 
 ## 1. 对象数组
 
@@ -404,3 +411,126 @@ public static int sum(int... a) {
 **注意2：**此处第一个 `<T>` 表示泛型方法，第二个 `<T>` 表示泛型类。参数为一个数组。
 
 ### 3-6. 枚举
+
+## 4. Map 集合
+
+### 4-1. Map
+
+Map 映射，一键一值，成对出现。键唯一！  
+
+**难点：**  
+`Set<Map.Entry<K,V>> entrySet()`返回此映射中包含的映射关系的 Set 视图。  
+
+### 4-2. HashMap
+
+### 4-3. LinkedHashMap
+
+### 4-4. TreeMap
+
+## 5. Collections
+
+**注意**  
+Collection：是一个接口，单列集合的顶层接口  
+Collections：是一个类，有对集合排序和二分查找的方法
+
+## 5. 总结
+
+```text
+集合：
+    Collection  集合
+        List 列表，有序可重复
+            ArrayList
+                顺序表存储（数组）查询快增删慢
+                线程不安全，效率高
+            Vector
+                顺序表存储（数组）查询快增删慢
+                线程安全，效率低
+            LinkedList
+                链表存储，查询慢增删快
+                线程不安全，效率高
+        Set 集合，无序不可重复
+            HashSet
+                哈希存储
+                依赖 hashCode() 和 equals()
+                执行：
+                    首先判断 hashCode() 是否相等
+                    是：equals()
+                        True：元素重复不添加
+                        False：不重复添加
+                    否：添加
+                两个函数自动生成即可
+
+                LinkedHashSet
+                    由链表和哈希表组成
+                    链表保证有序，哈希保证唯一
+            TreeSet
+                红黑树存储：
+                    唯一：比较返回值为0
+                    有序：1.自然排序
+                            实现 Comparable 接口
+                          2.比较器排序
+                            集合接收一个 Comparator 实现类对象
+    Map 映射
+        Map 数据结构仅针对键，与值无关
+        子类同上
+
+        HashMap 线程不安全，效率高
+            LinkedHashMap
+        HashTable 线程安全，效率低
+        TreeMap
+```
+
+**选择：**
+
+- 是否是键值对  
+  - 是：Map
+    - ？键值是否要排序？
+    - 是：TreeMap
+    - 否：HashMap
+    - 不知道：HashMap
+  - 否：Collection
+    - ？元素是否唯一？
+      - 是：Set
+        - ？元素是否排序？
+        - 是：TreeSet
+        - 否：HashSet
+        - 不知道：HashSet
+      - 否：List
+        - ？线程是否安全？
+        - 是：Vector（其实不一定用）
+        - 否：ArrayList 和 LinkedList
+          - 增删多：LinkedList
+          - 查询多：ArrayList
+        - 不知道：ArrayList
+
+**常见方法和遍历方式：**
+
+Collection：
+
+- add()
+- remove()
+- contains()
+- iterator()
+- size()
+
+遍历方法:
+
+- 增强 for（本质是迭代器）
+- 迭代器
+- 普通 for（List）
+  
+Map：
+
+- put()
+- remove()
+- containsKey() || containsValue()
+- keySet()
+- get()
+- value()
+- entrySet()
+- size()
+
+遍历方法：
+
+- 根据键找值
+- 根据键值对分别找键和值
