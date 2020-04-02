@@ -148,7 +148,7 @@ System.out.println(address2.getHostAddress());
 `ServerSocket(int port)`创建绑定到特定端口的服务器套接字。
 
 **方法：**  
-`Socket accept()`侦听并接受到此套接字的连接。 
+`Socket accept()`侦听并接受到此套接字的连接。  
 
 ### 4-4 UDP传输
 
@@ -369,7 +369,7 @@ public class ProxyDemo {
         MyInvocationHandler mi = new MyInvocationHandler(ud);
 
         // 使用 Proxy 的静态方法
-        UserDao proxyObj = (UserDao) Proxy.newProxyInstance(ud.getClass().getClassLoader(), 
+        UserDao proxyObj = (UserDao) Proxy.newProxyInstance(ud.getClass().getClassLoader(),
                 ud.getClass().getInterfaces(), mi);
 
         proxyObj.add();
